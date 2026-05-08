@@ -170,21 +170,8 @@ Feito com muito amor 💖
 
 <!-- ÁUDIO -->
 <audio id="musica" loop>
-<source src="musica.mp3" type="audio/mp3">
+  <source src="diegoznidarcicpc.github.io/dasmaes/musica.mp3" type="audio/mpeg">
 </audio>
-
-</div>
-
-<script>
-
-function mostrarSurpresaETocarMusica(){
-
-    // mostra surpresa
-    document.getElementById("surpresa").style.display="block";
-
-    // toca música
-    const musica = document.getElementById("musica");
-    musica.play();
 
 }
 
