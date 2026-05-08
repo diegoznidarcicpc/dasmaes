@@ -173,6 +173,23 @@ Feito com muito amor 💖
   <source src="https://diegoznidarcicpc.github.io/dasmaes/musica.mp3" type="audio/mpeg">
 </audio>
 
+<script>
+
+function mostrarSurpresaETocarMusica(){
+
+    document.getElementById("surpresa").style.display = "block";
+
+    const musica = document.getElementById("musica");
+
+    musica.load();
+
+    const playPromise = musica.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.log("Erro ao tocar música:", error);
+        });
+    }
 }
 
 function criarCoracao(){
@@ -183,8 +200,11 @@ function criarCoracao(){
 
     coracao.innerHTML = "💖";
 
+    coracao.style.position = "fixed";
+    coracao.style.top = "-10px";
     coracao.style.left = Math.random() * 100 + "vw";
     coracao.style.fontSize = (Math.random() * 20 + 20) + "px";
+    coracao.style.animation = "cair 5s linear forwards";
 
     document.body.appendChild(coracao);
 
