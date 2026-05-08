@@ -103,8 +103,8 @@ video{
     position:fixed;
     top:-10px;
     color:red;
-    animation:cair linear forwards;
     z-index:999;
+    animation:cair 5s linear forwards;
 }
 
 @keyframes cair{
@@ -170,9 +170,22 @@ Feito com muito amor 💖
 
 <!-- ÁUDIO -->
 <audio id="musica" loop>
-  <source src="diegoznidarcicpc.github.io/dasmaes/musica.mp3" type="audio/mpeg">
+  <source src="https://diegoznidarcicpc.github.io/dasmaes/musica.mp3" type="audio/mpeg">
 </audio>
 
+<script>
+
+function mostrarSurpresaETocarMusica(){
+
+    document.getElementById("surpresa").style.display = "block";
+
+    const musica = document.getElementById("musica");
+
+    musica.load();
+
+    musica.play().catch(error => {
+        console.log("Erro ao tocar música:", error);
+    });
 }
 
 function criarCoracao(){
@@ -184,10 +197,7 @@ function criarCoracao(){
     coracao.innerHTML = "💖";
 
     coracao.style.left = Math.random() * 100 + "vw";
-
     coracao.style.fontSize = (Math.random() * 20 + 20) + "px";
-
-    coracao.style.animationDuration = (Math.random() * 3 + 2) + "s";
 
     document.body.appendChild(coracao);
 
