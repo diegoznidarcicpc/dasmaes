@@ -158,10 +158,6 @@ Com amor, seu príncipe Vicente 💙
 width="250"
 style="border-radius:20px; margin-top:20px;">
 
-<video controls>
-<source src="video-mae.mp4" type="video/mp4">
-</video>
-
 </div>
 
 <footer>
